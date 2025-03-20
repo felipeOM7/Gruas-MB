@@ -19,8 +19,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #FF4800;
-  --secondary: #F2F2F4;
+  --primary: #FFDF00;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -82,6 +81,10 @@ body {
 
 }
 
+.color-read {
+  color: #ffdf00;
+}
+
 .custom-video {
   width: 100%;
   height: 500px;
@@ -132,6 +135,81 @@ dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+.bg-custom {
+  background-color: #FFDF00;
+}
+
+/* Estilo del botón flotante */
+#whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 2s ease-in-out infinite;
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+/* Efecto de movimiento flotante */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Estilo del icono de WhatsApp */
+#whatsapp-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Estilo del texto de WhatsApp que aparece al acercar el mouse */
+#whatsapp-text {
+  display: none;
+  font-size: 12px;
+  color: white;
+  margin-left: 10px;
+}
+
+/* Mostrar el texto al pasar el mouse */
+#whatsapp-btn:hover #whatsapp-text {
+  display: inline;
+}
+
+/* Cambiar el tamaño al pasar el mouse */
+#whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+.bg-button {
+  border-color: black;
+  background-color: #FFDF00;
+  color: black
+}
+
+.bg-text {
+  color: black
+}
+
 
 ol ol,
 ul ul,
@@ -369,7 +447,9 @@ progress {
   -webkit-appearance: button;
 }
 
-output {
+
+
+output {-.float
   display: inline-block;
 }
 
@@ -4492,6 +4572,18 @@ input[type="button"].btn-block {
   position: relative;
   top: -5px;
   margin-left: 0;
+}
+
+.col-lg-3.col-md-6.text-center.mb-5 {
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.col-lg-3.col-md-6.text-center.mb-5:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 .logo-img {
@@ -10468,6 +10560,10 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
+.bg-text1 {
+  color: black;
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -10976,4 +11072,117 @@ p,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+
+.float {
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 3px #999;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+  animation: vibrar 1.5s infinite;
+  text-decoration: none;
+}
+
+
+.my-float {
+  font-size: 32px;
+  transition: opacity 0.3s ease;
+  animation: vibrar 1s infinite;
+}
+
+@keyframes vibrar {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.float::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  animation: chispas 1.5s infinite ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes chispas {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+
+
+
+.whatsapp-text {
+  display: none;
+  font-size: 18px;
+  color: #25d366;
+}
+
+
+.float:hover {
+  width: 150px;
+
+  background-color: #fff;
+
+  color: #25d366;
+
+}
+
+
+.float:hover .my-float {
+  opacity: 0;
+}
+
+.float:hover .whatsapp-text {
+  display: block;
+
+}
+
+
+.float:hover .whatsapp-text {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
 }

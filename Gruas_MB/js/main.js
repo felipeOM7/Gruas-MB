@@ -112,13 +112,5 @@ document.getElementById('searchInput').addEventListener('keypress', function (ev
 });
 
 
-document.querySelectorAll('.flip-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        const card = this.closest('.card');
-        card.classList.toggle('flipped');
-    });
-});
 
-
-
-
+ 
