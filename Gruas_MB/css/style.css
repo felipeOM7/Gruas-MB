@@ -449,8 +449,8 @@ progress {
 
 
 
-output {-.float
-  display: inline-block;
+output {
+  -.float display: inline-block;
 }
 
 summary {

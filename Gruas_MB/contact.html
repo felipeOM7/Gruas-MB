@@ -8,23 +8,22 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
+
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
 
@@ -41,9 +40,18 @@
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center text-white">
-                    <small><i class="fa fa-phone mr-2"></i>(221) 1745035</small>
+
+                    <a href="tel:+2211745035">
+                        <small class="text-white d-inline-flex align-items-center"><i class="fa fa-phone mr-2"></i>(221)
+                            1745035</small>
+                    </a>
+
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>ventas@gruasmb.mx</small>
+                    <a href="mailto:ventas@gruasmb.mx" style="text-decoration: none; color: inherit;">
+                        <small><i
+                                class="fa fa-envelope mr-2 text-white d-inline-flex align-items-center"></i>ventas@gruasmb.mx</small>
+                    </a>
+
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
@@ -125,16 +133,18 @@
                     <h1 class="mb-4">¡Te ayudaremos!</h1>
                     <div class="contact-form bg-secondary" style="padding: 30px;">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form name="sentMessage" id="contactForm"
+                            action="https://formsubmit.co/felipeosoriomorales58@gmail.com" method="POST"
+                            novalidate="novalidate">
                             <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name"
+                                <input type="text" class="form-control border-0 p-4" id="name" name="name"
                                     placeholder="Nombre completo" required="required"
-                                    data-validation-required-message="Nombrfe completo" />
+                                    data-validation-required-message="Nombre completo" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Email"
-                                    required="required" data-validation-required-message="Email" />
+                                <input type="email" class="form-control border-0 p-4" name="email" id="email"
+                                    placeholder="Email" required="required" data-validation-required-message="Email" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group mb-3">
@@ -147,7 +157,7 @@
                             </div>
 
                             <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="Message"
+                                <textarea name="message" class="form-control border-0 py-3 px-4" rows="3" id="Message"
                                     placeholder="Mensaje" required="required"
                                     data-validation-required-message="Mensaje"></textarea>
                                 <p class="help-block text-danger"></p>
